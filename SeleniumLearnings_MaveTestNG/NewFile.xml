@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<suite name="Test">
+<test name="Testing">
+
+<groups>
+<run>
+<include name="Apple"></include>
+</run>
+</groups>
+
+
+<classes>
+<class name="testNG.GroupingExample"></class>
+
+
+<!-- <class name="testNG.TestSuiteExample"></class>
+<class name="testNG.SampleClass"></class>
+<class name="testNG.DependenciesManagement"></class>
+<class name="testNG.Prioritytestng"></class> -->
+
+</classes>
+</test>
+</suite>
