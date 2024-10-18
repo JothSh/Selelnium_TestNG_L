@@ -6,8 +6,8 @@ import org.testng.annotations.Test;
 public class ParameterizationExample {
 	
 	@Test
-	
-public void myName() {
-	System.out.println("Myname is ");
+	@Parameters("Name")
+public void myName(String name) {
+	System.out.println("Myname is "+ name);
 }
 }
