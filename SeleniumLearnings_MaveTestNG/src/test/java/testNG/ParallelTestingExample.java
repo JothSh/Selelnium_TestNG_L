@@ -1,5 +1,8 @@
 package testNG;
 
 public class ParallelTestingExample {
-syso
+public void openChrome() {
+	
+	System.out.println("Hi there ");
+}
 }
