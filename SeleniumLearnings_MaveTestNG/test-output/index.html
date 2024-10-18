@@ -60,7 +60,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="group-Test" class="navigator-link ">
-                    <span>1 group</span>
+                    <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,12 +103,7 @@
                     <div class="method-list-content passed suite-Test">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Test" title="testNG.GroupingExample" class="method navigator-link" hash-for-method="Apple">Apple</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Test" title="testNG.GroupingExample" class="method navigator-link" hash-for-method="Apple1">Apple1</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Test" title="testNG.ParameterizationExample" class="method navigator-link" hash-for-method="myName">myName</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Test -->
@@ -126,21 +121,14 @@
           <div class="suite-Test-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testNG.GroupingExample</span>
+              <span class="class-name">testNG.ParameterizationExample</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Apple">
-                  </a> <!-- Apple -->
-                  <span class="method-name">Apple</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="Apple1">
-                  </a> <!-- Apple1 -->
-                  <span class="method-name">Apple1</span>
+                  <a name="myName">
+                  </a> <!-- myName -->
+                  <span class="method-name">myName</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -148,21 +136,17 @@
         </div> <!-- panel Test -->
         <div panel-name="test-xml-Test" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/home/ai/eclipse-workspace/SeleniumLearnings_MaveTestNG/NewFile.xml</span>
+            <span class="header-content">/home/ai/git/repository/SeleniumLearnings_MaveTestNG/NewFile.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Test&quot;&gt;
+&lt;suite name=&quot;Test&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Testing&quot;&gt;
-    &lt;groups&gt;
-      &lt;run&gt;
-        &lt;include name=&quot;Apple&quot;/&gt;
-      &lt;/run&gt;
-    &lt;/groups&gt;
+    &lt;parameter name=&quot;Name&quot; value=&quot;JOTHEESH&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testNG.GroupingExample&quot;/&gt;
+      &lt;class name=&quot;testNG.ParameterizationExample&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Testing --&gt;
 &lt;/suite&gt; &lt;!-- Test --&gt;
@@ -186,18 +170,6 @@
             <span class="header-content">Groups for Test</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="test-group">
-              <span class="test-group-name">Apple</span>
-              <br/>
-              <div class="method-in-group">
-                <span class="method-in-group-name">Apple</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">Apple1</span>
-                <br/>
-              </div> <!-- method-in-group -->
-            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-Test" class="panel">
@@ -214,20 +186,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Apple')
-data.setCell(0, 2, 'testNG.GroupingExample')
-data.setCell(0, 3, 7);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'Apple1')
-data.setCell(1, 2, 'testNG.GroupingExample')
-data.setCell(1, 3, 2);
+data.setCell(0, 1, 'myName')
+data.setCell(0, 2, 'testNG.ParameterizationExample')
+data.setCell(0, 3, 25);
 window.suiteTableData['Test']= { tableData: data, tableDiv: 'times-div-Test'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 9 ms</span>
+              <span class="suite-total-time">Total running time: 25 ms</span>
               <div id="times-div-Test">
               </div> <!-- times-div-Test -->
             </div> <!-- times-div -->
@@ -242,18 +210,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Test" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">2 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">testNG.GroupingExample</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">Orange2</span>
-                <br/>
-                <span class="ignored-method-name">Orange1</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Test" class="panel">
@@ -262,14 +221,10 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testNG.GroupingExample</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testNG.ParameterizationExample</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">Apple</span>
+                <span class="method-name">myName</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">Apple1</span>
-                <span class="method-start">13 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
